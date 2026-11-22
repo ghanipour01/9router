@@ -25,6 +25,7 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@monaco-editor/react": "^4.7.0",
+    "@next/swc-win32-x64-msvc": "^16.4.6",
     "@next/third-parties": "^16.2.9",
     "@node-saml/node-saml": "^5.1.0",
     "@xyflow/react": "^12.10.1",
@@ -54,19 +55,19 @@
   "optionalDependencies": {
     "@aws-sdk/credential-providers": "^3.1135.0",
     "ajv": "^8.17.1",
-    "better-sqlite3": "^12.6.2",
+    "better-sqlite3": "^12.11.1",
     "ws": "^8.18.0"
   },
   "comment_better_sqlite3": "kept in optionalDependencies so npm install doesn't fail on systems without build tools — sql.js is used as fallback at runtime",
   "comment_aws_sdk_credential_providers": "kept in optionalDependencies (npm still installs these by default) and imported lazily in shared/awsCredentials.js — only AWS Bedrock connections using profile/SSO mode need it; static accessKeyId/secretAccessKey connections never load it",
   "comment_playwright_core": "devDependency only (keeps end-user installs small); open-sse/services/lazyRuntime.js downloads it + wreq-js on first use into <DATA_DIR>/runtime. playwright-core ships no browser binaries (run `npx playwright-core install chromium` or point OBSCURA_CDP_ENDPOINT/cloakbrowser at a stealth engine)",
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.18",
+    "tailwindcss": "4.3.3",
+    "@tailwindcss/postcss": "4.3.3",
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
     "playwright-core": "^1.62.1",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4",
     "wreq-js": "^3.2.0"
   },
   "overrides": {
